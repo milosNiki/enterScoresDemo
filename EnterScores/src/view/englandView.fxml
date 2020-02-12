@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--author ITOmega -->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.collections.*?>
+
+<!--An "England: Premier League" scene has been selected to be processed, this is the code to display it-->
+<!--loads the controller "controller.PrimaryController"-->
+<AnchorPane fx:id="anchorPane2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrimaryController">
+    <!--labels for "ChoiceBoxes" and "TextFields-->
+    <Label fx:id="headLine" text="Enter Scores" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="160.0"/>
+    <Label fx:id="ht" text="HT" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="365.0"/>
+    <Label fx:id="ft" text="FT" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="410.0"/>
+    <Label fx:id="points" text="PTS" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="450.0"/>
+    <Label fx:id="homeTeam" text="Home Team" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="30.0" />
+    <!--select a home team from Premier league-->
+    <ChoiceBox fx:id="choiceHomeTeam" value="Arsenal" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="120.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Arsenal"/>
+                <String fx:value="Bournemouth"/>
+                <String fx:value="Brighton and Hove Albion"/>
+                <String fx:value="Burnley"/>
+                <String fx:value="Cardiff City"/>
+                <String fx:value="Chelsea"/>
+                <String fx:value="Crystal Palace"/>
+                <String fx:value="Everton"/>
+                <String fx:value="Fulham"/>
+                <String fx:value="Huddersfield Town"/>
+                <String fx:value="Leicester City"/>
+                <String fx:value="Liverpool"/>
+                <String fx:value="Manchester City"/>
+                <String fx:value="Manchester United"/>
+                <String fx:value="Newcastle United"/>
+                <String fx:value="Southampton"/>
+                <String fx:value="Tottenham Hotspur"/>
+                <String fx:value="Watford"/>
+                <String fx:value="West Ham United"/>
+                <String fx:value="Wolverhampton Wanderers"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <!--entering of scores and points of the matches the home teams played-->
+    <TextField fx:id="halfTimeHomeScore" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="356.0" prefWidth="40.0"/>
+    <TextField fx:id="finalTimeHomeScore" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="400.0" prefWidth="40.0"/>
+    <TextField fx:id="homePoints" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="444.0" prefWidth="40.0"/>
+    <Label fx:id="awayTeam" text="Away Team" AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="30.0" />
+    <!--select a away team from Premier league-->
+    <ChoiceBox fx:id="choiceAwayTeam" value="Bournemouth" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="120.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Arsenal"/>
+                <String fx:value="Bournemouth"/>
+                <String fx:value="Brighton and Hove Albion"/>
+                <String fx:value="Burnley"/>
+                <String fx:value="Cardiff City"/>
+                <String fx:value="Chelsea"/>
+                <String fx:value="Crystal Palace"/>
+                <String fx:value="Everton"/>
+                <String fx:value="Fulham"/>
+                <String fx:value="Huddersfield Town"/>
+                <String fx:value="Leicester City"/>
+                <String fx:value="Liverpool"/>
+                <String fx:value="Manchester City"/>
+                <String fx:value="Manchester United"/>
+                <String fx:value="Newcastle United"/>
+                <String fx:value="Southampton"/>
+                <String fx:value="Tottenham Hotspur"/>
+                <String fx:value="Watford"/>
+                <String fx:value="West Ham United"/>
+                <String fx:value="Wolverhampton Wanderers"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <!--entering of scores and points of the matches the away teams played-->
+    <TextField fx:id="halfTimeAwayScore" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="356.0" prefWidth="40.0"/>
+    <TextField fx:id="finalTimeAwayScore" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="400.0" prefWidth="40.0"/>
+    <TextField fx:id="awayPoints" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="444.0" prefWidth="40.0"/>
+    <!--button that executes the method "backToPrimary()" in the controller and returns the scene to "view_of_app.fxml"-->
+    <Button fx:id="backToPrimaryFromEngland" onAction="#backToPrimary" mnemonicParsing="true" text="_Back" AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="30.0"/>
+    <!--button that executes the method "executePremierLeague()" in the controller-->
+    <Button fx:id="executePremierLeague" onAction="#executePremierLeague" mnemonicParsing="true" text="_Execute" AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="407.0"/>
+    <!--TextArea where you can get information about execution in method "executePremierLeague() from "controller.PrimaryController""-->
+    <TextArea fx:id="textArea" AnchorPane.topAnchor="230.0" AnchorPane.leftAnchor="30.0" prefHeight="140.0" prefWidth="455.0"/>
+    <stylesheets>
+        <!--path to CSS file--> 
+        <URL value="@stage_style.css"/>
+    </stylesheets>
+</AnchorPane>

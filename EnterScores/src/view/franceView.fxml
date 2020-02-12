@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Autor ITOmega-->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.collections.*?>
+
+<!--An "France: Ligue1" scene has been selected to be processed, this is the code to display it-->
+<!--loads the controller "controller.PrimaryController"-->
+<AnchorPane fx:id="anchorPane2" prefHeight="260.0" prefWidth="520.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrimaryController">
+    <!--Labels-->
+    <Label fx:id="headLine" text="Enter Scores" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="160.0"/>
+    <Label fx:id="ht" text="HT" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="365.0"/>
+    <Label fx:id="ft" text="FT" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="410.0"/>
+    <Label fx:id="points" text="PTS" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="450.0"/>
+    <Label fx:id="homeTeam" text="Home Team" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="30.0" />
+    <!--select a home team from Ligue1-->
+    <ChoiceBox fx:id="choiceHomeTeam" value="Amiens" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="120.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Amiens"/>
+                <String fx:value="Angers"/>
+                <String fx:value="Bordeaux"/>
+                <String fx:value="Brest"/>
+                <String fx:value="Dijon"/>
+                <String fx:value="Lille"/>
+                <String fx:value="Lyon"/>
+                <String fx:value="Marseille"/>
+                <String fx:value="Metz"/>
+                <String fx:value="Monaco"/>
+                <String fx:value="Montpellier"/>
+                <String fx:value="Nantes"/>
+                <String fx:value="Nice"/>
+                <String fx:value="Nîmes"/>
+                <String fx:value="PSG"/>
+                <String fx:value="Reims"/>
+                <String fx:value="Rennes"/>
+                <String fx:value="Saint-Étienne"/>
+                <String fx:value="Strasbourg"/>
+                <String fx:value="Toulouse"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <!--entering of scores and points of the matches the home teams played-->
+    <TextField fx:id="halfTimeHomeScore" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="356.0" prefWidth="40.0"/>
+    <TextField fx:id="finalTimeHomeScore" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="400.0" prefWidth="40.0"/>
+    <TextField fx:id="homePoints" AnchorPane.topAnchor="75.0" AnchorPane.leftAnchor="444.0" prefWidth="40.0"/>
+    <Label fx:id="awayTeam" text="Away Team" AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="30.0" />
+    <!--select a away team from Ligue1-->
+    <ChoiceBox fx:id="choiceAwayTeam" value="Angers" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="120.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Amiens"/>
+                <String fx:value="Angers"/>
+                <String fx:value="Bordeaux"/>
+                <String fx:value="Brest"/>
+                <String fx:value="Dijon"/>
+                <String fx:value="Lille"/>
+                <String fx:value="Lyon"/>
+                <String fx:value="Marseille"/>
+                <String fx:value="Metz"/>
+                <String fx:value="Monaco"/>
+                <String fx:value="Montpellier"/>
+                <String fx:value="Nantes"/>
+                <String fx:value="Nice"/>
+                <String fx:value="Nîmes"/>
+                <String fx:value="PSG"/>
+                <String fx:value="Reims"/>
+                <String fx:value="Rennes"/>
+                <String fx:value="Saint-Étienne"/>
+                <String fx:value="Strasbourg"/>
+                <String fx:value="Toulouse"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <!--entering of scores and points of the matches the away teams played-->
+    <TextField fx:id="halfTimeAwayScore" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="356.0" prefWidth="40.0"/>
+    <TextField fx:id="finalTimeAwayScore" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="400.0" prefWidth="40.0"/>
+    <TextField fx:id="awayPoints" AnchorPane.topAnchor="115.0" AnchorPane.leftAnchor="444.0" prefWidth="40.0"/>
+    <!--button that executes the method "backToPrimary()" in the controller and returns the scene to "view_of_app.fxml"-->
+    <Button fx:id="backToPrimaryFromFrance" onAction="#backToPrimary" mnemonicParsing="true" text="_Back" AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="30.0"/>
+    <!--button that executes the method "executeLigue1" in the controller-->
+    <Button fx:id="executeFranceLeague" onAction="#executeLigue1" mnemonicParsing="true" text="_Execute" AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="407.0"/>
+    <!--TextArea where you can get information about execution in method "executeLigue1() from "controller.PrimaryController""-->
+    <TextArea fx:id="textArea" AnchorPane.topAnchor="230.0" AnchorPane.leftAnchor="30.0" prefHeight="140.0" prefWidth="455.0"/>
+    <!--Path to CSS file-->
+    <stylesheets>
+        <URL value="@stage_style.css"/>
+    </stylesheets>
+</AnchorPane>

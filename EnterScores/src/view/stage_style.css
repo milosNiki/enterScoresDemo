@@ -1,0 +1,13 @@
+#headLine{
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+
+#labelLeague{
+    -fx-font-size: 20px;
+}
+
+#ht, #ft, #points{
+    -fx-font-weight: bold;
+}
+

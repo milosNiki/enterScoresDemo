@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import java.net.URL?>
+
+<!--The opening scene where a league is selected to be processed-->
+<!--loads the controller "controller.PrimaryController"-->
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="515.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrimaryController">
+    <!--Labels-->
+    <Label fx:id="headLine" text="Enter Scores" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="160.0"/>
+    <Label fx:id="labelLeague" text="League" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="70.0" />
+    <!--Choosing a league-->
+    <ChoiceBox fx:id="choiceLeague" value="England: Premier League" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="150.0" >
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="England: Premier League"/>
+                <String fx:value="France: Ligue 1"/>
+                <String fx:value="Germany: Bundesliga"/>
+                <String fx:value="Italy: Serie A"/>
+                <String fx:value="Spain: La Liga"/>
+                <String fx:value="Serbia: Super Liga"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <!--Button to proceed(method is "nextButton()" in "controller.PrimaryController")-->
+    <Button fx:id="nextButton" onAction="#nextButton" mnemonicParsing="true" text="_Next" AnchorPane.topAnchor="250.0" AnchorPane.leftAnchor="235.0"/>
+    <!--Path to CSS file-->
+    <stylesheets>
+        <URL value="@stage_style.css"/>
+    </stylesheets>
+</AnchorPane>
